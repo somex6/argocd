@@ -1,0 +1,11 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: backend-secret
+  annotations:
+    avp.kubernetes.io/path: "secret/data/mysql/webapp"
+type: Opaque
+stringData:
+  db_name: <db-name-vault-key>
+  username: <username-vault-key>
+  password: <password-vault-key>
